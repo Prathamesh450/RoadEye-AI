@@ -1,273 +1,130 @@
+**RoadEye AI — Mobile App**
 
-# RoadEye-AI 🤖
+RoadEye AI is a mobile client (Flutter) for the RoadEye project. This README covers how to set up, run and build the mobile app in the `roadeyeai/` directory. It assumes you will not change any source code — only perform environment and configuration steps.
 
-Detect road anomalies and improve driving safety using AI.
+**Summary**: The mobile app is a Flutter project integrating with the backend and Firebase services to display and interact with vehicle detection and reporting features.
 
-Enhance road safety with real-time anomaly detection.
+**Prerequisites**:
 
-![License](https://img.shields.io/github/license/Prathamesh450/RoadEye-AI)
-![GitHub stars](https://img.shields.io/github/stars/Prathamesh450/RoadEye-AI?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Prathamesh450/RoadEye-AI?style=social)
-![GitHub issues](https://img.shields.io/github/issues/Prathamesh450/RoadEye-AI)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/Prathamesh450/RoadEye-AI)
-![GitHub last commit](https://img.shields.io/github/last-commit/Prathamesh450/RoadEye-AI)
+- **Flutter**: Install the latest stable Flutter SDK (recommended). Verify with `flutter --version`.
+- **Platform toolchains**:
+  - Android: Android SDK, Android Studio (emulator or device), `adb` available.
+  - iOS (macOS only): Xcode and Xcode command line tools.
+- **Firebase**: A Firebase project with required services enabled (Authentication, Realtime/Firestore, Storage, etc.) if you plan to run full features.
 
-![Python](https://img.shields.io/badge/python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
-![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white)
+**Files already present**:
 
-## 📋 Table of Contents
+- `google-services.json` and `GoogleService-Info.plist` may already be present in this repository. Verify and, if needed, replace them with values from your Firebase project.
 
-- [About](#about)
-- [Features](#features)
-- [Demo](#demo)
-- [Quick Start](#quick-start)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [Testing](#testing)
-- [Deployment](#deployment)
-- [Acknowledgments](#acknowledgments)
+**Quick Start (local development)**
 
-## About
+1. Open a terminal and change to the mobile app folder:
 
-RoadEye-AI is a Python-based project that utilizes machine learning to detect anomalies on roads, such as potholes, cracks, and other hazards. The primary goal is to enhance road safety by providing real-time alerts to drivers or feeding data to road maintenance services. This project aims to reduce accidents and improve the overall driving experience.
-
-The project addresses the critical need for automated road defect detection, which is traditionally a manual and time-consuming process. By leveraging technologies like TensorFlow and Keras, RoadEye-AI offers a cost-effective and efficient solution for identifying and reporting road anomalies. The target audience includes automotive companies, transportation authorities, and individual drivers seeking to improve road safety.
-
-RoadEye-AI employs a deep learning model trained on a dataset of road images to identify anomalies. The architecture is designed to be scalable and adaptable to various deployment scenarios, including edge devices and cloud-based systems. Key technologies include Python, TensorFlow, Keras, and OpenCV. The unique selling point is its ability to provide real-time anomaly detection with high accuracy, enabling proactive measures to prevent accidents and improve road maintenance.
-
-## ✨ Features
-
-- 🎯 **Anomaly Detection**: Identifies potholes, cracks, and other road hazards in real-time from image or video input.
-- ⚡ **Performance**: Optimized for efficient processing, allowing for quick anomaly detection with minimal latency.
-- 🔒 **Security**: Secure data handling and processing to protect user privacy and data integrity.
-- 📱 **Responsive**: Designed to be deployed on various platforms, including mobile devices and embedded systems.
-- 🛠️ **Extensible**: Modular architecture allows for easy integration of new features and customization to specific road conditions.
-
-## 🎬 Demo
-
-🔗 **Live Demo**: [https://roadeye-ai-demo.example.com](https://roadeye-ai-demo.example.com)
-
-### Screenshots
-![Anomaly Detection](screenshots/anomaly_detection.png)
-*Real-time anomaly detection highlighting road defects*
-
-![Dashboard View](screenshots/dashboard.png)
-*Web dashboard displaying anomaly reports and statistics*
-
-## 🚀 Quick Start
-
-Clone and run in 3 steps:
-
-```bash
-git clone https://github.com/Prathamesh450/RoadEye-AI.git
-cd RoadEye-AI
-pip install -r requirements.txt
-python main.py
+```powershell
+cd "d:\last_project\New folder\roadeye\RoadEyeAi\roadeyeai"
 ```
 
-Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
+2. Fetch dependencies:
 
-## 📦 Installation
-
-### Prerequisites
-- Python 3.8+
-- pip
-- TensorFlow 2.0+
-- Keras
-- OpenCV
-- [Other dependencies listed in `requirements.txt`]
-
-### Option 1: Using pip
-
-```bash
-# Clone the repository
-git clone https://github.com/Prathamesh450/RoadEye-AI.git
-cd RoadEye-AI
-
-# Create a virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # On Linux/macOS
-venv\Scripts\activate  # On Windows
-
-# Install dependencies
-pip install -r requirements.txt
+```powershell
+flutter pub get
 ```
 
-### Option 2: Docker
+3. Run on a connected device or emulator:
 
-```bash
-# Build the Docker image
-docker build -t roadeye-ai .
-
-# Run the Docker container
-docker run -p 5000:5000 roadeye-ai
+```powershell
+flutter run
 ```
 
-## 💻 Usage
+Or select a specific device with `-d` (e.g., `-d emulator-5554`).
 
-### Basic Usage
+**Firebase configuration**
 
-```python
-from roadeye_ai import RoadEye
+- Android: Place `google-services.json` into `android/app/`.
+- iOS: Place `GoogleService-Info.plist` into `ios/Runner/` and ensure it is added to the Xcode project.
+- If these files are already present, confirm they correspond to a Firebase project you control and that necessary SDKs/APIs are enabled.
 
-# Initialize RoadEye with default settings
-roadeye = RoadEye()
+After adding/updating files, run:
 
-# Detect anomalies in an image
-image_path = 'path/to/your/image.jpg'
-anomalies = roadeye.detect_anomalies(image_path)
-
-# Print the detected anomalies
-print(anomalies)
+```powershell
+flutter clean; flutter pub get
 ```
 
-### Advanced Examples
+**Building release artifacts**
 
-```python
-from roadeye_ai import RoadEye
+- Android APK/AAB:
 
-# Initialize RoadEye with custom settings
-roadeye = RoadEye(threshold=0.8, model_path='path/to/your/custom_model.h5')
-
-# Detect anomalies in a video stream
-video_path = 'path/to/your/video.mp4'
-roadeye.detect_anomalies_video(video_path)
+```powershell
+flutter build apk --release
+# or for Play Store bundle
+flutter build appbundle --release
 ```
 
-## ⚙️ Configuration
+- iOS (macOS required):
 
-### Environment Variables
-
-Create a `.env` file in the root directory:
-
-```env
-# Model path
-MODEL_PATH=models/default_model.h5
-
-# Detection threshold
-DETECTION_THRESHOLD=0.7
-
-# Server port
-PORT=5000
+```powershell
+flutter build ios --release
+# then open Xcode to manage signing and upload
 ```
 
-### Configuration File
+**Project structure (high level)**
 
-```json
-{
-  "model_path": "models/default_model.h5",
-  "detection_threshold": 0.7,
-  "port": 5000
-}
+- `lib/` — primary Flutter source code for the mobile app.
+- `android/`, `ios/`, `web/`, `macos/`, `windows/` — platform folders generated by Flutter.
+- `assets/` — included static assets.
+- `AI/` — contains ML models and related assets used by the project (may be large).
+- `backend/` — separate backend services (not part of the mobile app build).
+
+**Common troubleshooting**
+
+- Missing Firebase config errors: ensure `google-services.json` / `GoogleService-Info.plist` are present and correct.
+- Package or plugin issues: run `flutter pub get` and `flutter clean` then `flutter pub get` again.
+- Gradle / Android build errors: ensure Android SDK and required API levels are installed in Android Studio.
+- iOS signing issues: open the `ios/Runner.xcworkspace` in Xcode and configure signing teams/provisioning.
+
+**Notes & guidance**
+
+- Do not modify backend APIs without coordinating with the backend (`backend/`) sources — API endpoints and keys may be required.
+- If adding Firebase files from a different Firebase project, update any backend rules or credentials as needed.
+
+**Useful commands**
+
+- Get Flutter info:
+
+```powershell
+flutter doctor -v
 ```
 
-## 📁 Project Structure
+- Clean project:
 
-```
-RoadEye-AI/
-├── 📁 data/                # Training data
-├── 📁 models/              # Trained models
-├── 📁 src/                 # Source code
-│   ├── 📄 roadeye_ai.py    # Main RoadEye class
-│   ├── 📄 utils.py         # Utility functions
-│   └── 📄 app.py           # Flask application
-├── 📁 tests/               # Test files
-├── 📄 .env.example        # Example environment variables
-├── 📄 requirements.txt   # Dependencies
-├── 📄 README.md            # Project documentation
-└── 📄 LICENSE              # License file
+```powershell
+flutter clean
+flutter pub get
 ```
 
-## 🤝 Contributing
+**Contributing**
+This README is informational only. If you want to contribute to the mobile app source, please open an issue or PR so changes can be reviewed — do not push breaking changes to `master` without prior coordination.
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+**License & Contact**
+Refer to the repository root for licensing. For questions, contact the repository owner or open an issue.
 
-### Quick Contribution Steps
+---
 
-1. 🍴 Fork the repository
-2. 🌿 Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. ✅ Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. 📤 Push to the branch (`git push origin feature/AmazingFeature`)
-5. 🔀 Open a Pull Request
+Created to help run and build the Flutter mobile client in `roadeyeai/`.
 
-### Development Setup
+# roadeyeai
 
-```bash
-# Fork and clone the repo
-git clone https://github.com/yourusername/RoadEye-AI.git
+A new Flutter project.
 
-# Install dependencies
-pip install -r requirements.txt
+## Getting Started
 
-# Create a new branch
-git checkout -b feature/your-feature-name
+This project is a starting point for a Flutter application.
 
-# Make your changes and test
-pytest
+A few resources to get you started if this is your first Flutter project:
 
-# Commit and push
-git commit -m "Description of changes"
-git push origin feature/your-feature-name
-```
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-### Code Style
-
-- Follow PEP 8 guidelines.
-- Use descriptive variable names.
-- Add comments to explain complex logic.
-- Write unit tests for new features.
-
-## 🧪 Testing
-
-Run tests using pytest:
-
-```bash
-pytest
-```
-
-## 🚀 Deployment
-
-### Option 1: Local Deployment
-
-```bash
-python app.py
-```
-
-### Option 2: Docker Deployment
-
-```bash
-docker build -t roadeye-ai .
-docker run -p 5000:5000 roadeye-ai
-```
-
-### Option 3: Cloud Deployment (e.g., AWS, Google Cloud)
-
-1.  Create a virtual machine instance.
-2.  Install Python and dependencies.
-3.  Clone the repository.
-4.  Run the application using a process manager like `gunicorn` or `uwsgi`.
-5.  Configure a reverse proxy like `nginx` to handle incoming requests.
-
-### License Summary
-
-- ✅ Commercial use
-- ✅ Modification
-- ✅ Distribution
-- ✅ Private use
-- ❌ Liability
-- ❌ Warranty
-
-## 🙏 Acknowledgments
-
-- 🎨 **Design inspiration**: [Material Design](https://material.io/)
-- 📚 **Libraries used**:
-  - [TensorFlow](https://www.tensorflow.org/) - Deep learning framework
-  - [Keras](https://keras.io/) - High-level neural networks API
-  - [OpenCV](https://opencv.org/) - Computer vision library
-```
-
-
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
