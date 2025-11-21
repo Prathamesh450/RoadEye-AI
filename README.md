@@ -29,9 +29,6 @@ Enhance road safety with real-time anomaly detection.
 - [Contributing](#contributing)
 - [Testing](#testing)
 - [Deployment](#deployment)
-- [FAQ](#faq)
-- [License](#license)
-- [Support](#support)
 - [Acknowledgments](#acknowledgments)
 
 ## About
@@ -255,24 +252,6 @@ docker run -p 5000:5000 roadeye-ai
 4.  Run the application using a process manager like `gunicorn` or `uwsgi`.
 5.  Configure a reverse proxy like `nginx` to handle incoming requests.
 
-## FAQ
-
-**Q: What types of anomalies can RoadEye-AI detect?**
-
-A: Currently, RoadEye-AI can detect potholes, cracks, and other common road surface defects.
-
-**Q: Can I use RoadEye-AI on a mobile device?**
-
-A: Yes, RoadEye-AI is designed to be deployed on mobile devices with sufficient processing power.
-
-**Q: How can I improve the accuracy of anomaly detection?**
-
-A: You can improve accuracy by training the model on a larger and more diverse dataset, and by fine-tuning the model parameters.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ### License Summary
 
 - ✅ Commercial use
@@ -282,12 +261,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - ❌ Liability
 - ❌ Warranty
 
-## 💬 Support
-
-- 📧 **Email**: prathamesh.support@example.com
-- 🐛 **Issues**: [GitHub Issues](https://github.com/Prathamesh450/RoadEye-AI/issues)
-- 📖 **Documentation**: [Full Documentation](https://roadeye-ai.readthedocs.io)
-
 ## 🙏 Acknowledgments
 
 - 🎨 **Design inspiration**: [Material Design](https://material.io/)
@@ -295,7 +268,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   - [TensorFlow](https://www.tensorflow.org/) - Deep learning framework
   - [Keras](https://keras.io/) - High-level neural networks API
   - [OpenCV](https://opencv.org/) - Computer vision library
-- 👥 **Contributors**: Thanks to all [contributors](https://github.com/Prathamesh450/RoadEye-AI/contributors)
-- 🌟 **Special thanks**: To the open-source community for their invaluable contributions.
 ```
+
 
