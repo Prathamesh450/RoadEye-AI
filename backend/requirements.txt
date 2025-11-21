@@ -1,0 +1,14 @@
+flask
+flask-cors
+werkzeug
+geopy
+requests
+firebase-admin
+shapely
+ultralytics
+torch
+opencv-python
+easyocr
+numpy
+yt-dlp 
+python-dotenv 

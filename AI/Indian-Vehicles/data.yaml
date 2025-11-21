@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 6
+names: ['bus', 'emergency_vehicle', 'four_wheeler', 'three_wheeler', 'truck', 'two_wheeler']
+
+roboflow:
+  workspace: project-1-nddfj
+  project: indian-vehicle
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/project-1-nddfj/indian-vehicle/dataset/1

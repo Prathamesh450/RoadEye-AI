@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "557352065415",
+    "project_id": "zonedatabase-d0432-339fe",
+    "storage_bucket": "zonedatabase-d0432-339fe.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557352065415:android:075164c80e42ff49a59b22",
+        "android_client_info": {
+          "package_name": "com.example1.roadeyeai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "557352065415-fevjn7210v5h7gf6o46qauga9c8a16eq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc9Mcev543PzhTuXYhYw_uyvpopCYjQP8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "557352065415-fevjn7210v5h7gf6o46qauga9c8a16eq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

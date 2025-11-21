@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "756502130603",
+    "project_id": "zonedatabase-d0432-48b05",
+    "storage_bucket": "zonedatabase-d0432-48b05.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756502130603:android:c06c99cdd26cd68609acee",
+        "android_client_info": {
+          "package_name": "com.example1.roadeyeai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756502130603-5n4q96bl615kh5vbt2q5c42l13mvaott.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example1.roadeyeai",
+            "certificate_hash": "d0ac38ed50b1277498839df8bf699beddbdf3d7a"
+          }
+        },
+        {
+          "client_id": "756502130603-gptc3nq9bu2q49jkl12hrj3te4veb280.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrUry4OMHdoX1FWduxqlW4saArn833mIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "756502130603-gptc3nq9bu2q49jkl12hrj3te4veb280.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

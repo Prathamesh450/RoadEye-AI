@@ -1,0 +1,12 @@
+names:
+- '0'
+nc: 1
+roboflow:
+  license: CC BY 4.0
+  project: indianlicenceplate
+  url: https://universe.roboflow.com/indianlicenceplate/indianlicenceplate/dataset/1
+  version: 1
+  workspace: indianlicenceplate
+test: ../test/images
+train: ../train/images
+val: ../valid/images
