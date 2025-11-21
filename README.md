@@ -1,4 +1,4 @@
-```markdown
+
 # RoadEye-AI 🤖
 
 Detect road anomalies and improve driving safety using AI.
@@ -298,3 +298,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - 👥 **Contributors**: Thanks to all [contributors](https://github.com/Prathamesh450/RoadEye-AI/contributors)
 - 🌟 **Special thanks**: To the open-source community for their invaluable contributions.
 ```
+
